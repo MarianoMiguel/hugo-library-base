@@ -1,0 +1,29 @@
+{
+  "name": "mariano.io",
+  "version": "1.0.0",
+  "description": "mariano.io website",
+  "main": "index.html",
+  "author": "Mariano Miguel <mariano@mariano.io>",
+  "license": "MIT",
+  "dependencies": {
+    "autoprefixer": "^8.1.0",
+    "browser-sync": "^2.23.6",
+    "child_process": "^1.0.2",
+    "cssnano": "^3.10.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^7.0.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-stylelint": "^7.0.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-uglify-es": "^1.0.1",
+    "inuit-flexgrid": "^0.3.0",
+    "inuit-fluid-font-size": "0.2.1",
+    "inuitcss": "^6.0.0",
+    "path": "^0.12.7",
+    "postcss-pxtorem": "^4.0.1",
+    "stylelint": "^9.1.1",
+    "stylelint-scss": "^2.5.0",
+    "sw-precache": "^5.2.0"
+  }
+}

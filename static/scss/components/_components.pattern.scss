@@ -1,0 +1,24 @@
+/* ==========================================================================
+   PATTERN
+   ========================================================================== */
+
+.c-pattern + .c-pattern {
+  border-top: 1px solid $color-black-transparent;
+  padding-top: $spacing-unit;
+  margin-top: $spacing-unit;
+}
+
+.c-pattern__content {
+  background: $color-white;
+  padding: $spacing-unit-small;
+}
+
+.c-pattern__content--dark {
+  background: $color-black;
+}
+
+.c-pattern__container {
+  all: initial;
+  width: 100%;
+}
+

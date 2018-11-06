@@ -1,0 +1,89 @@
+/* ==========================================================================
+   #TEXT
+   ========================================================================== */
+
+/*
+   Sizes
+   ========================================================================== */
+
+.u-text-alpha {
+  @include fluid-font-size(alpha, $enforce: true);
+}
+
+.u-text-beta {
+  @include fluid-font-size(beta, $enforce: true);
+}
+
+.u-text-gamma {
+  @include fluid-font-size(gamma, $enforce: true);
+}
+
+.u-text-delta {
+  @include fluid-font-size(delta, $enforce: true);
+}
+
+.u-text-epsilon {
+  @include fluid-font-size(epsilon, $enforce: true);
+}
+
+.u-text-zeta {
+  @include fluid-font-size(zeta, $enforce: true);
+}
+
+.u-text-eta {
+  @include fluid-font-size(eta, $enforce: true);
+}
+
+
+
+
+
+/*
+   Alignment
+   ========================================================================== */
+
+.u-text-center {
+  text-align: center !important;
+}
+
+.u-text-left {
+  text-align: left !important;
+}
+
+.u-text-right {
+  text-align: right !important;
+}
+
+
+
+
+
+/*
+   Measure
+   ========================================================================== */
+
+.u-text-measure {
+  max-width: 60ch !important;
+}
+
+.u-text-measure-narrow {
+  max-width: 50ch !important;
+}
+
+.u-text-measure-wide {
+  max-width: 75ch !important;
+}
+
+
+
+
+/* 
+   Truncation
+   ========================================================================== */
+
+.u-text-truncate {
+  display: block !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}

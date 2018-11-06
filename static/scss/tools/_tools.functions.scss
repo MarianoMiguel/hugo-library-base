@@ -1,0 +1,37 @@
+///* ========================================================================
+//   #FUNCTIONS
+//   ======================================================================== */
+
+/**
+ * String replace
+ */
+
+@function str-replace($string, $search, $replace: "") {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+/**
+ * Strip the units out of a given value
+ */
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+/**
+ * Map deep get
+ * by Hugo Giraudel
+ */
+
+@function map-deep-get($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+    @return $map;
+}

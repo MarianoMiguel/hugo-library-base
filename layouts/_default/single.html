@@ -1,22 +1,9 @@
-{{ partial "header.html" . }}
-	<main>
-		<article>
-			<h1>{{ .Title }}</h1>
-			<time>{{ .Date.Format "02.01.2006 15:04" }}</time>
-			<div>
-				{{ .Content }}
-			</div>
-			<div>
-				<ul id="tags">
-					{{ range .Params.tags }}
-					<li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> </li>
-					{{ end }}
-				</ul>
-			</div>
-			<div>
-				{{ template "_internal/disqus.html" . }}
-			</div>
-		</article>
-	</main>
-{{ partial "sidebar.html" . }}
-{{ partial "footer.html" . }}
+<div class="c-page js-nav-container">
+  <div class="c-page__item c-page__sidebar">
+    {{ partial "header.html" . }}
+  </div>
+  <div class="c-page__item c-page__content">
+    <button class="c-page__toggle c-btn u-margin-bottom js-nav-toggle" data-open="Close menu" data-closed="Menu">Menu</button>
+    {{ partial "patterns/pattern-section.html" . }}
+  </div>
+</div>

@@ -1,0 +1,27 @@
+/* ==========================================================================
+   COLOR
+   ========================================================================== */
+
+.c-color {
+  display: inline-block;
+  width: 100%;
+  padding: $spacing-unit;
+}
+
+.c-color__name,
+.c-color__value {
+  background: rgba($color-black, 0.5);
+  color: $color-white;
+  padding: $spacing-unit-tiny;
+  max-width: 250px;
+}
+
+.c-color__name {
+  @include fluid-font-size(epsilon);
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.c-color__value {
+  margin-bottom: 0;
+}

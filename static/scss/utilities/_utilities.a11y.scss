@@ -1,0 +1,10 @@
+/* ==========================================================================
+   #A11Y
+   ========================================================================== */
+
+@media screen and (prefers-reduced-motion) {
+  *, *:before, *:after {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

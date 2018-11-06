@@ -1,0 +1,13 @@
+<div class="c-pattern">
+  {{if .Get "name"}}
+  <h2 class="c-pattern__title">{{.Get "name"}}</h2>
+  {{end}}
+  <div class="c-sizes js-sort" data-sort="data-size" data-sort-direction="desc">
+    {{ range $key, $val := $.Site.Data.tokens.fontSizes }}
+      <div class="c-sizes__item" data-size="{{ $val }}">
+        <span class="c-sizes__data">{{ $key }} &mdash; {{ $val }}</span>
+        <span class="c-sizes__sample" style="font-size: {{ $val }}">The quick brown fox jumps over the lazy dog</span>
+      </div>
+    {{ end }}
+  </div>
+</div>

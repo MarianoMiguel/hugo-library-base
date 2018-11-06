@@ -1,0 +1,14 @@
+//* ==========================================================================
+//   #FLUID-FONT-SIZE
+//   ========================================================================= */
+
+@mixin fluid-font-size($name, $enforce: false) {
+  $size: map-deep-get($global-typography-scale, $name, size);
+  $lh: map-deep-get($global-typography-scale, $name, lh);
+  
+  @if (type-of($name) != string) {
+    @error "`#{$name}` needs to be a string.";
+  }
+
+  @include inuit-fluid-font-size($size, $lh, $enforce);
+}

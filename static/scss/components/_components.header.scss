@@ -1,0 +1,16 @@
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+
+.c-header {
+  display: inline-block;
+  width: 100%;
+}
+
+.c-header__logo {
+  background: none;
+  display: block;
+  max-width: 125px;
+  padding: $spacing-unit-small;
+  margin: $spacing-unit-small auto;
+}

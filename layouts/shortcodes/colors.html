@@ -1,0 +1,13 @@
+<div class="c-pattern">
+  {{if .Get "name"}}
+  <h2 class="c-pattern__title">{{.Get "name"}}</h2>
+  {{end}}
+  <div class="c-colors">
+    {{ range $key, $val := $.Site.Data.tokens.colors }}
+      <div class="c-color" style="background-color: {{ $val }};">
+        <p class="c-color__name">{{ $key }}</p>
+        <p class="c-color__value">{{ $val }}</p>
+      </div>
+    {{ end }}
+  </div>
+</div>

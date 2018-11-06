@@ -1,0 +1,52 @@
+<!--
+noSource: boolean Removes the source code toggle button
+showSource: boolean Shows the source code section by default
+frame: boolean Wraps output in an <iframe> (to prevent style collisions and allow for viewport-relative styling (e.g. using vw or position: fixed))
+responsive: boolean | string | array sets a fixed screensize or allows switching between multiple sizes
+light: boolean a light checkered background (default)
+dark: boolean a dark checkered background
+plain: boolean a transparent background without any padding
+span: number[1–6] width of the specimen
+-->
+
+<div class="c-pattern">
+  {{ $uniq := .Get "name" | htmlEscape | base64Encode | truncate 50 "" }}
+  {{if .Get "name"}}
+  <h2 class="c-pattern__title">{{.Get "name"}}</h2>
+  {{end}}
+  {{if .Get "dark" | eq "true" }}
+  <div class="c-pattern__content c-pattern__content--dark">
+  {{else}}
+  <div class="c-pattern__content">
+  {{end}}
+    <div class="c-pattern__container" id="demo-{{ $uniq }}"></div>
+  </div>
+  <template id="template-{{ $uniq }}">
+    <html>
+      <head>
+        {{ partial "patterns/pattern-head.html" . }}
+      </head>
+      <body>
+        {{ .Inner }}
+      </body>
+    </html>
+  </template>
+  <script>
+    (function() {
+        var root = document.getElementById('demo-{{ $uniq }}');
+        root.attachShadow({mode: 'open'});
+        var template = document.getElementById('template-{{ $uniq }}');
+        var script = template.content.querySelector('script');
+        if (script) {
+            script.textContent = `(function() { var demo = document.getElementById(\'demo-{{ $uniq }}\').shadowRoot; ${script.textContent} })()`
+         }
+         root.shadowRoot.appendChild(document.importNode(template.content, true));
+    })();
+  </script>
+
+  {{if .Get "showSource" | eq "true"}}
+    <div class="c-pattern__source">
+      {{highlight .Inner html "linenos=inline"}}
+    </div>
+  {{ end }}
+</div>

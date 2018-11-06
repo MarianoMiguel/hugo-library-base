@@ -1,0 +1,8 @@
+{{ if .Get "darkText" | eq "true"}}
+<div class="c-color c-color--dark" style="background-color: {{ .Get "value" }};">
+{{ else }}
+<div class="c-color" style="background-color: {{ .Get "value" }};">
+{{ end }}
+  <p class="c-color__name">{{ .Get "name" }}</p>
+  <p class="c-color__value">{{ .Get "value" }}</p>
+</div>

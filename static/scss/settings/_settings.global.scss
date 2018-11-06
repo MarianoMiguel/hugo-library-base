@@ -1,0 +1,107 @@
+/* ==========================================================================
+   #GLOBAL
+   ========================================================================== */
+
+$inuit-fractions: 12;
+
+// Be aware that enabling offsets produces a large chunk of classes which might
+// bloat your CSS, depending on the amount of breakpoints you defined.
+// Only set this to `true` if you are absolutely sure about what you are doing.
+$inuit-offsets: false;
+
+$mq-breakpoints: (
+  medium: 800px,
+  large: 1200px,
+);
+
+
+
+
+
+/*
+   Color definitions
+   ========================================================================== */
+
+// A map containing our project's complete color palette
+$color-black: #111111;
+$color-black-transparent: rgba($color-black, .1);
+$color-gray: #ccc;
+$color-gray-light: #f8f8f8;
+$color-gray-mid: #555;
+$color-gray-dark: #333;
+$color-white: #ffffff;
+$color-white-transparent: rgba($color-white, .3);
+
+$color-purple-dark: #050316;
+$color-purple: #492CD8;
+
+///*
+//   Baseline & font sizes
+//   ======================================================================== */
+
+$global-baseline: 6px !default;
+$inuit-global-baseline: $global-baseline;
+
+$global-typography-rem-base: 16px;
+$global-typography-growth: 1;
+$global-typography-breakpoint: 1200px;
+
+$global-font-size: 16px !default;
+$inuit-global-font-size: $global-font-size;
+
+$global-line-height: 1.8 !default;
+
+$global-typography-scale: (
+  alpha: (
+    size: 48px,
+    lh: 1.25,
+  ),
+  beta: (
+    size: 36px,
+    lh: 1.25,
+  ),
+  gamma: (
+    size: 30px,
+    lh: 1.25,
+  ),
+  delta: (
+    size: 24px,
+    lh: 1.25,
+  ),
+  epsilon: (
+    size: 20px,
+    lh: $global-line-height,
+  ),
+  zeta: (
+    size: 18px,
+    lh: $global-line-height,
+  ),
+  eta: (
+    size: 14px,
+    lh: $global-line-height
+  ),
+);
+
+
+///*
+//   Font family definitions
+//   ======================================================================== */
+
+$font-sans-serif: 'Rubik', -apple-system, BlinkMacSystemFont, 'avenir next', avenir,
+                  helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui',
+                  arial, sans-serif;
+$font-serif:      georgia, times, serif;
+
+
+
+
+/* 
+   Z-Index
+   ========================================================================== */
+
+$z-index-0: -1;
+$z-index-1: 1;
+$z-index-2: 10;
+$z-index-3: 100;
+$z-index-4: 1000;
+$z-index-5: 10000;

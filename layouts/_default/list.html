@@ -1,10 +1,11 @@
-{{ partial "header.html" . }}
-	<main>
-		{{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
-		{{ range $paginator.Pages }}
-			{{ partial "summary.html" . }}
-		{{ end }}
-		{{ partial "pagination.html" . }}
-	</main>
-{{ partial "sidebar.html" . }}
-{{ partial "footer.html" . }}
+<div class="c-page js-nav-container">
+  <div class="c-page__item c-page__sidebar">
+    {{ partial "header.html" . }}
+  </div>
+  <div class="c-page__item c-page__content">
+    <button class="c-page__toggle c-btn u-margin-bottom js-nav-toggle" data-open="Close menu" data-closed="Menu">Menu</button>
+    {{ range where .Pages "Section" .Section }}
+      {{ partial "patterns/pattern-section.html" . }}
+    {{ end }}
+  </div>
+</div>

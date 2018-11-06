@@ -1,0 +1,33 @@
+/* ==========================================================================
+   SIZES
+   ========================================================================== */
+
+.c-sizes {
+  display: inline-block;
+  width: 100%;
+  background: $color-white;
+}
+
+.c-sizes__item {
+  padding: $spacing-unit-small;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.c-sizes__item + .c-sizes__item {
+  border-top: 1px solid $color-black-transparent;
+}
+
+.c-sizes__data {
+  @include fluid-font-size(eta);
+  color: $color-gray-mid;
+  display: block;
+  width: 100%;
+}
+
+.c-sizes__sample {
+  color: $color-black;
+  display: inline;
+  width: 100%;
+}
